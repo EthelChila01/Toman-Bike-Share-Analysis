@@ -190,36 +190,17 @@ ON combined_years_table.yr = cost_table.yr
    *    ![revenue](assets/images/profit.png)
 
 
+# Visualization
+##### Results
+  *  What does the dashboard look like?
 
+ ![dashboard](assets/images/toman_bike_share_dashboard.gif)
 
-
-Visualization
-Results
-What does the dashboard look like?
 # Analysis
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-1. 
-
-2. 
-3.   
-
-4.   
-5.
-6. to get the revenue we did riders * price
-7. for the profit we did riders * price - COGS
 
 # Recommendation
 **Conversation Increase:** Considering the substantial increase last year, a more conservative increase might be prudentto avoid hitting a price ceiling where demand starts to drop. An increase in the range of 10-15% could test the market's response without risking a significant loss of customers.
