@@ -45,6 +45,7 @@ We need your expertise to develop a dashboard for "Toman Bike Share" that diplay
 *  Profit and Revenue Trends
 *  Seasonal Revenue
 *  Rider Demograpics
+  
 **Design and Aesthetics:** Use our company colors and ensure the dasboard is easy to navigate.
 **Data Source** Access to our databases will be provided. If no database create one.
 **Deadline** We need a preliminary version ASAP
@@ -135,14 +136,9 @@ This is the stage where we did a scan of what's in the data, errors, inconcsiste
 *    The we noticed the cogs column had the time data type so we went ahead and changed it to decimal then later changed to money in power query
 *    We noticed that the COGS column had the time data type, so we changed it to decimal. Later, in Power Query, we converted it to the money data type.
 
-
-
-
 #### Our SQL queries
 
 ```sql
-
-
 
 CREATE DATABASE toman_bike_db
 USE toman_bike_db
@@ -189,18 +185,11 @@ ON combined_years_table.yr = cost_table.yr
   
    *    ![revenue](assets/images/profit.png)
 
-
 # Visualization
 ##### Results
   *  What does the dashboard look like?
 
  ![dashboard](assets/images/toman_bike_share_dashboard.gif)
-
-# Analysis
-
-
-
-
 
 # Recommendation
 **Conversation Increase:** Considering the substantial increase last year, a more conservative increase might be prudentto avoid hitting a price ceiling where demand starts to drop. An increase in the range of 10-15% could test the market's response without risking a significant loss of customers.
