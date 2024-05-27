@@ -106,7 +106,7 @@ Mokkup AI  | Designing the wireframe/mockup of the dashboard           |
    * Generate the findings based on the insights
    * Write the documentation + commentary
 
-# Data exploration notes
+### Data exploration notes
 
 This is the stage where we did a scan of what's in the data, errors, inconcsistencies, bugs, weird and corrupted characters etc
 
@@ -117,10 +117,61 @@ This is the stage where we did a scan of what's in the data, errors, inconcsiste
       places are appropriately formatted.
    3. The price column has too many decimal places and needs to be rounded off.
    4. We have more data than we need, so some of these columns would need to be removed
+   5. We noticed that the two tables have the same column names but different records. To ensure all our data is consolidated and easy to use, we will combine the two tables.
+   6.We observed that the year column does not accurately indicate the year; it only contains values of 0 or 1. After investigation, we found that 0 corresponds to 2021, while 1 corresponds to 2022. This representation needs to 
+     be updated.
+## Transform the data
+### Data exploration notes
 
+*   We created a database
+*  We thoroughly examined the tables and their data to determine what needed to be addressed.
+*   We employed the UNION operator to combine the two tables into a single result set. By using UNION (rather than UNION ALL), we guarantee that there are no duplicate rows.
+*   created a CTE inoder to connect the newly combined table with the cost table
+*   We had to incorporate a third table to work with its data alongside the two tables we connected earlier. After examining the tables, we found that the common column among all of them is the year column. We used this column 
+   to join the tables. To ensure we retained all records from our main table (the CTE), we used a LEFT JOIN to match it with the cost table, bringing back all rows from the main table and matching them with the corresponding 
+   rows in the cost table.
+*   We then selected the specific columns needed for our assignment
+*   Rounded the price column to two decimal places
+*    The we noticed the cogs column had the time data type so we went ahead and changed it to decimal then later changed to money in power query
+*    We noticed that the COGS column had the time data type, so we changed it to decimal. Later, in Power Query, we converted it to the money data type.
 
+*   We created profit column this way because our COGS (Cost of Goods Sold) is a per-rider cost rather than a total cost
+*   We created the revenue column like so
+´´´
+CREATE DATABASE toman_bike_db
+USE toman_bike_db
 
-# Visualization
+CREATE VIEW toman_bike_view AS
+WITH combined_years_table AS 
+(
+SELECT * 
+FROM bike_share_yr_0
+UNION
+SELECT * 
+FROM bike_share_yr_1
+)
+SELECT 
+dteday,
+season,
+combined_years_table.yr,
+weekday,
+hr,rider_type,
+riders,
+round(price, 2) AS price,
+CONVERT(DECIMAL(7, 2),
+        CAST(DATEPART(HOUR, COGS) AS VARCHAR(2)) + '.' +
+        RIGHT('00' + CAST(DATEPART(MINUTE, COGS) AS VARCHAR(2)), 2)
+    ) AS COGS
+
+FROM combined_years_table 
+LEFT JOIN cost_table
+ON combined_years_table.yr = cost_table.yr
+´´´
+*   The representation of the years in the year column was updated in Power Query using conditional formatting.
+
+Visualization
+Results
+What does the dashboard look like?
 # Analysis
 
 
@@ -128,30 +179,21 @@ This is the stage where we did a scan of what's in the data, errors, inconcsiste
 
 
 
-# Development
-### Pseudocode
-   *  What's the general approach in creating this solution from start to finish?
-   1. Get the data
-   2. Explore the data in SQL server management studio
-   3. Clean the data with SQL
-   4. Do some touch ups with power query
-   5. Visualize the data in Power BI
-   6. Generate the findings based on the insights
 
 
 
 
 
 
-We want to make sure all our data is join together for us to make it simple to use
-so 
-1. Used union to combine the two tables 2021 and 2022 in order to connect the two tables as one after checking them well and noticing that they both have the same kind of data with unique rows using union instead of union all to make sure we don't have any duplicated rows
-created a CTE inoder to connect the newly combined table with the cost table
-2. We first checked for what our we have in common for our tables g«found out that the yr column is common amoung all the table so we used it to cjoin the tables we use left join inorder to get all the records from our left table which is the cte is our main table and we want it to match with the cost table and bring back back all the rows from the left and match it
-3.   Now just need to pick the columns that are needed for our project which are the date, season,the year,riders,the rider type,price and COGS
 
-4.   Rounded the price column to two decimal places
-5. The we noticed the cogs column had the time data type so we went ahead and changed it to decimal then later changed to money in power query
+
+1. 
+
+2. 
+3.   
+
+4.   
+5.
 6. to get the revenue we did riders * price
 7. for the profit we did riders * price - COGS
 
