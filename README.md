@@ -186,7 +186,8 @@ ON combined_years_table.yr = cost_table.yr
     *   ![revenue](assets/images/revenue_column.png)
 
 *   We created profit column this way because our COGS (Cost of Goods Sold) is a per-rider cost rather than a total cost;
-
+  
+   *   ![profit](assets/images/ profit.png)
 
 
 
