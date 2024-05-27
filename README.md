@@ -62,7 +62,11 @@ We need data on the sales records of Toman Bike Share which includes their recor
    *  Prices
    *  Cost of sales
 Where is the data coming from? The data has been provided by the comapny, [see here to find it](https://github.com/EthelChila01/Toman-Bike-Share-Analysis/tree/main/assets/docs).
+# Stages
 
+   * Design
+   * Developement
+   * Analysis
 # Design
 ## Dashboard components required
  * What should the dashboard contain based on the requirements provided?
@@ -81,9 +85,40 @@ Some of the data visuals that may be appropriate in answering our questions incl
    * Line and clustered column chart
    * Cards
    * Slicer   
+![Dashboard_mockup](assets/images/dashboard_mockup.png)
 
+## Tools
+
+Tool       | Purpose                                                   |
+---------- | ----------------------------------------------------------|
+SQL Server | Cleaning and analyzing the data                           |
+Power BI   | Visualizing the data via interactive dashboards           |
+Mokkup AI  | Designing the wireframe/mockup of the dashboard           |
 
 # Development
+## Pseudocode
+
+   * What's the general approach in creating this solution from start to finish?
+   * Get the data
+   * Load the data into SQL Server
+   * Clean the data with SQL
+   * Visualize the data in Power BI
+   * Generate the findings based on the insights
+   * Write the documentation + commentary
+
+# Data exploration notes
+
+This is the stage where we did a scan of what's in the data, errors, inconcsistencies, bugs, weird and corrupted characters etc
+
+   * What are the initial observations with this dataset? What's caught your attention so far?
+   1. There are at least nine columns containing the data we need for this analysis, in addition to these columns we will create (profit and revenue). This indicates that we have all the necessary information from the file 
+      without needing to contact the client for additional data.
+   2. In the cost table, the COGS column is currently set to the date data type, but it should contain monetary values. We need to change the data type of this column to a monetary type and ensure that the resulting decimal 
+      places are appropriately formatted.
+   3. The price column has too many decimal places and needs to be rounded off.
+   4. We have more data than we need, so some of these columns would need to be removed
+
+
 
 # Visualization
 # Analysis
