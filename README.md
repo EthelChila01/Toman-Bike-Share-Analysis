@@ -137,7 +137,11 @@ This is the stage where we did a scan of what's in the data, errors, inconcsiste
 
 *   We created profit column this way because our COGS (Cost of Goods Sold) is a per-rider cost rather than a total cost
 *   We created the revenue column like so
-´´´sql
+
+```sql
+
+
+
 CREATE DATABASE toman_bike_db
 USE toman_bike_db
 
@@ -166,6 +170,8 @@ CONVERT(DECIMAL(7, 2),
 FROM combined_years_table 
 LEFT JOIN cost_table
 ON combined_years_table.yr = cost_table.yr
+
+
 ´´´
 *   The representation of the years in the year column was updated in Power Query using conditional formatting.
 
