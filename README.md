@@ -1,10 +1,32 @@
 # Toman-Bike-Share-Analysis
+
+
 # Table of contents
 # Objective
 # Development
 # Design
 # Visualization
 # Analysis
+
+
+
+
+
+
+# Development
+### Pseudocode
+   *  What's the general approach in creating this solution from start to finish?
+   1. Get the data
+   2. Explore the data in SQL server management studio
+   3. Clean the data with SQL
+   4. Do some touch ups with power query
+   5. Visualize the data in Power BI
+   6. Generate the findings based on the insights
+
+
+
+
+
 
 We want to make sure all our data is join together for us to make it simple to use
 so 
