@@ -136,7 +136,7 @@ This is the stage where we did a scan of what's in the data, errors, inconcsiste
 *    We noticed that the COGS column had the time data type, so we changed it to decimal. Later, in Power Query, we converted it to the money data type.
 
 *   We created profit column this way because our COGS (Cost of Goods Sold) is a per-rider cost rather than a total cost
-*   We created the revenue column like so
+
 
 #### Our SQL queries
 
@@ -177,8 +177,10 @@ ON combined_years_table.yr = cost_table.yr
 #### Our updates in power query
 
 
-*   The representation of the years in the year column was updated in Power Query using conditional formatting like so;
-    *   ![Dashboard_mockup](assets/images/dashboard_mockup.png)
+*   The representation of the years in the year column was updated in Power Query using conditional formatting this way;
+    *   ![years](assets/images/years.png)
+      
+*   We created the revenue column this way;
 
 Visualization
 Results
