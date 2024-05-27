@@ -1,6 +1,6 @@
 # Toman-Bike-Share-Analysis
 
-![excel_to_powerbi_animated-diagram](assets/images/kaggle_to_powerbi.gif)
+![sql_to_powerbi-diagram](assets/images/sql_to_powerbi_image.png)
 
 # Table of contents
 
