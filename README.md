@@ -61,14 +61,30 @@ We need data on the sales records of Toman Bike Share which includes their recor
    *  Ride types
    *  Prices
    *  Cost of sales
-Where is the data coming from? The data has been provided by the comapny, see here to find it.
+Where is the data coming from? The data has been provided by the comapny, [see here to find it](https://github.com/EthelChila01/Toman-Bike-Share-Analysis/tree/main/assets/docs).
 
+# Design
+## Dashboard components required
+ * What should the dashboard contain based on the requirements provided?
+    1. Hourly Revenue Analysis
+    2. Profit and Revenue Trends
+    3. Seasonal Revenue
+    4. Rider Demograpics 
+ ## Dashboard mockup
 
+   * What should it look like?
+Some of the data visuals that may be appropriate in answering our questions include:
 
+   * Table
+   * Clustered bar chart
+   * Donut chart
+   * Line and clustered column chart
+   * Cards
+   * Slicer   
 
 
 # Development
-# Design
+
 # Visualization
 # Analysis
 
