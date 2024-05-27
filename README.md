@@ -1,7 +1,35 @@
 # Toman-Bike-Share-Analysis
 
 
+
 # Table of contents
+
+- [Objective](#objective)
+  - [User story](#user-story)
+- [Data source](#data-source)
+- [Stages](#stages)
+- [Design](#design)
+  - [Dashboard components](#dashboard-components-required)
+- [Dashboard mockup](#dashboard-mockup)
+- [Tools](#tools)
+- [Development](#development)
+- [Pseudocode](#pseudocode)
+- [Data exploration notes](#data-exploration-notes)
+- [Data cleaning](#data-cleaning)
+  - [Transform the data](#transform-the-data)
+  - [Create the SQL view](#create-the-sql-view)
+- [Testing](#testing)
+  - [Column count check](#column-count-check)
+  - [Data type check](#data-type-check)
+  - [Duplicate count check](#duplicate-count-check)
+- [Visualisation](#visualisation)
+  - [DAX measures](#dax-measures)
+- [Analysis](#analysis)
+  - [Validation](#validation)
+  - [Discovery](#discovery)
+- [Recommendations](#recommendations)
+  - [Potential ROI](#potential-ROI)
+  - [Action plan](#action-plan)
 # Objective
 # Development
 # Design
