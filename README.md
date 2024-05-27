@@ -171,8 +171,10 @@ FROM combined_years_table
 LEFT JOIN cost_table
 ON combined_years_table.yr = cost_table.yr
 
+```
 
-´´´
+
+
 *   The representation of the years in the year column was updated in Power Query using conditional formatting.
 
 Visualization
