@@ -18,19 +18,55 @@
 - [Data cleaning](#data-cleaning)
   - [Transform the data](#transform-the-data)
   - [Create the SQL view](#create-the-sql-view)
-- [Testing](#testing)
   - [Column count check](#column-count-check)
   - [Data type check](#data-type-check)
   - [Duplicate count check](#duplicate-count-check)
 - [Visualisation](#visualisation)
-  - [DAX measures](#dax-measures)
 - [Analysis](#analysis)
   - [Validation](#validation)
   - [Discovery](#discovery)
 - [Recommendations](#recommendations)
   - [Potential ROI](#potential-ROI)
   - [Action plan](#action-plan)
+
 # Objective
+### User story
+
+   * What is the key point?
+Head of marketing from Bike Share sent us the email below:
+**Request for Development of Toman Bike Share Dashboard**
+
+Dear Data Analyst,
+We need your expertise to develop a dashboard for "Toman Bike Share" that diplays our key performance metrics for informed decision making.
+
+**Requirements**
+
+*  Hourly Revenue Analysis
+*  Profit and Revenue Trends
+*  Seasonal Revenue
+*  Rider Demograpics
+**Design and Aesthetics:** Use our company colors and ensure the dasboard is easy to navigate.
+**Data Source** Access to our databases will be provided. If no database create one.
+**Deadline** We need a preliminary version ASAP
+**Please provide an estimated timeline for completion and recommendation on raising prices next year**
+Best regards.
+
+# Data source
+  *  What data is needed to achieve our objective?
+We need data on the sales records of Toman Bike Share which includes their recored:
+   *  Work days/hours
+   *  Seasons
+   *  Years
+   *  Riders
+   *  Ride types
+   *  Prices
+   *  Cost of sales
+Where is the data coming from? The data has been provided by the comapny, see here to find it.
+
+
+
+
+
 # Development
 # Design
 # Visualization
@@ -67,3 +103,13 @@ created a CTE inoder to connect the newly combined table with the cost table
 5. The we noticed the cogs column had the time data type so we went ahead and changed it to decimal then later changed to money in power query
 6. to get the revenue we did riders * price
 7. for the profit we did riders * price - COGS
+
+# Recommendation
+**Conversation Increase:** Considering the substantial increase last year, a more conservative increase might be prudentto avoid hitting a price ceiling where demand starts to drop. An increase in the range of 10-15% could test the market's response without risking a significant loss of customers.
+**Price Setting:**
+   *  If the price in 2022 was £4.99, a 10% increase would make the new price about $5.49.
+   *  A 15% increae would set the price at approximately £5.74.
+### Recommended Strategy
+**Market Analysis:** Conduct further market research to understand customer satisfaction, potential competitive changes, and the overall economic environment. This can guide whether leaning towards the lower or higher end of the suggested increase.
+**Segmented Pricing Strategy** Consider different pricing for casual versus registered users, as they may have different price sensitivities.
+**Monitor and Adjust:** Implement the new prices but be ready to adjust based on immediate customer feedback and sales data. Monitoring closely will allow you to fine-tune your pricing strategy without committing fully to a price that might out to be too high.
