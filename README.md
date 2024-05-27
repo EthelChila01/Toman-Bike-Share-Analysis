@@ -138,6 +138,8 @@ This is the stage where we did a scan of what's in the data, errors, inconcsiste
 *   We created profit column this way because our COGS (Cost of Goods Sold) is a per-rider cost rather than a total cost
 *   We created the revenue column like so
 
+#### Our SQL queries
+
 ```sql
 
 
@@ -172,10 +174,11 @@ LEFT JOIN cost_table
 ON combined_years_table.yr = cost_table.yr
 
 ```
+#### Our updates in power query
 
 
-
-*   The representation of the years in the year column was updated in Power Query using conditional formatting.
+*   The representation of the years in the year column was updated in Power Query using conditional formatting like so;
+    *   ![Dashboard_mockup](assets/images/dashboard_mockup.png)
 
 Visualization
 Results
